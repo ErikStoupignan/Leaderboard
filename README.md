@@ -1,6 +1,6 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Name of the project:
+# Leaderboard
 
 ## Built With
 
@@ -8,6 +8,7 @@
 - CSS
 - JS
 - Webpack
+- API's
 
 ## Live Demo
 

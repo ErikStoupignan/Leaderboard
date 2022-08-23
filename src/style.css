@@ -1,2 +1,127 @@
 
 /* stylelint-disable */
+* {
+  padding: 0;
+  margin: 0;
+}
+
+input {
+  border: 2px solid #000;
+}
+
+button {
+  box-shadow: 2px 2px 2px black;
+}
+
+button:hover {
+  cursor: pointer;
+  transform: scale(0.9);
+}
+
+body {
+  width: 100%;
+  box-sizing: border-box;
+  font-family: 'Comic Neue', cursive;
+  background-color: rgba(5, 9, 236, 0.151);
+}
+
+/* Main section */
+.section-container {
+  background-color: white;
+  width: 80vw;
+  margin: 12vh auto;
+  padding: 0 20px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 10px black;
+  border-radius: 20px;
+}
+
+.title-leaderBoard {
+  display: flex;
+  width: fit-content;
+  margin: 20px 20px 5px 20px;
+}
+
+/* tables container */
+.tables-container {
+  display: flex;
+  justify-content: space-around;
+  margin: 10px;
+}
+
+/* table left */
+.tb-recentScores {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+
+.tableLcont-title-botton {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.title-recentScores {
+  font-size: 14px;
+}
+
+.button-recentScores {
+  font-size: 8px;
+  font-weight: 700;
+  border-radius: 0;
+  padding: 0 2px 0 2px;
+  margin: 0;
+}
+
+.ul-score {
+  list-style: none;
+  border: 2px solid #000;
+}
+
+.ul-score li{
+  font-size: 10px;
+  padding-left: 5%;
+}
+
+.ul-score li:nth-child(even){
+  background-color: rgb(221, 221, 221);
+}
+
+/* table right */
+.tb-addYourScores {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+
+.title-addYourScores {
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+}
+
+.input-name {
+  margin: 10px 0;
+}
+
+input::placeholder {
+  font-size: 10px;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.726);
+  padding-left: 5px;
+}
+
+.button-addYourScores {
+  font-size: 8px;
+  font-weight: 700;
+  border-radius: 0;
+  padding: 0 2px 0 2px;
+  margin: 10px 0 0 auto;
+  width: fit-content;
+  
+
+}
