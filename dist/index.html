@@ -4,15 +4,48 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Template</title>
+    <title>LeaderBoard</title>
 
     <!-- Link to FontAwesome page -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" 
     integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
     crossorigin="anonymous"/>
 
+    <!-- Font family Lato -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap" rel="stylesheet">
+
 <script defer src="main.js"></script></head>
 <body>
-    hola mundo! 
+
+    <section class="section-container">
+        <h1 class="title-leaderBoard">LeaderBoard</h1>
+        <div>
+            <div class="tables-container">
+                <!-- container 1 for Recent scores -->
+                <div class="tb-recentScores">
+                    <div class="tableLcont-title-botton"><h2 class="title-recentScores">Recent scores</h2><button class="button-recentScores">Refresh</button></div>
+                    <ul id="scoreTable" class="ul-score">
+                        <li>Name: 1</li>
+                        <li>Name: 2</li>
+                        <li>Name: 3</li>
+                        <li>Name: 4</li>
+                        <li>Name: 5</li>
+                    </ul>
+                </div>
+
+                <!-- container 2 for Add your score -->
+                <div class="tb-addYourScores">
+                    <h2 class="title-addYourScores">Add your score</h2>
+                    <input class="input-name" placeholder="Your name..." type="text">
+                    <input class="input-score" placeholder="Your score..." type="text">
+                    <button class="button-addYourScores" type="submit">Submit</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="index.js"></script>
 </body>
 </html>
