@@ -14,6 +14,10 @@
 
 <a href="https://erikstoupignan.github.io/Leaderboard/">Open my project</a>
 
+## Medium-fidelity Wireframe
+
+![image](https://user-images.githubusercontent.com/106561762/186544171-0c9020fa-3995-400b-862b-0730faba9128.png)
+
 ## Getting Started
 
 To get a local copy up and running it, follow these simple steps.
