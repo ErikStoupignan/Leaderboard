@@ -12,7 +12,7 @@
 
 ## Live Demo
 
-<a href="#">Open my project</a>
+<a href="https://erikstoupignan.github.io/Leaderboard/">Open my project</a>
 
 ## Getting Started
 
@@ -30,7 +30,7 @@ To get a local copy up and running it, follow these simple steps.
 
 2. Copy the following link and paste it into your VSCode or your terminal:
 
-> Link to clone it. Paste here <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+> https://github.com/ErikStoupignan/Leaderboard.git
 
 3. Store it in the file you created before.
 
