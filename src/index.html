@@ -20,23 +20,27 @@
 <body>
 
     <section class="section-container">
+
         <h1 class="title-leaderBoard">LeaderBoard</h1>
 
-            <div class="tables-container">
-                <!-- container 1 for Recent scores -->
-                <div class="tb-recentScores">
-                    <div class="tableLcont-title-botton"><h2 class="title-recentScores">Recent scores</h2><button type="submit" class="button-recentScores">Refresh</button></div>
-                    <ul id="scoreTable" class="ul-score"></ul>
-                </div>
-
-                <!-- container 2 for Add your score -->
-                <div class="tb-addYourScores">
-                    <h2 class="title-addYourScores">Add your score</h2>
-                    <input class="input-name" placeholder="Your name..." type="text">
-                    <input class="input-score" placeholder="Your score..." type="text">
-                    <button class="button-addYourScores" type="submit">Submit</button>
-                </div>
+        <div class="tables-container">
+            <!-- container 1 for Recent scores -->
+            <div class="tb-recentScores">
+                <div class="tableLcont-title-botton"><h2 class="title-recentScores">Recent scores</h2><button id="btnUpdate" type="submit" class="button-recentScores">Refresh</button></div>
+                <ul id="scoreTable" class="ul-score"></ul>
             </div>
+
+            <!-- container 2 for Add your score -->
+            <form id="input-form" class="tb-addYourScores">
+                <h2 class="title-addYourScores">Add your score</h2>
+
+                <input id="input-name" class="input-name" placeholder="Your name..." type="text">
+                <input id="input-score" class="input-score" placeholder="Your score..." type="number">
+                <button id="input-button" class="button-addYourScores" type="button">Submit</button>
+            
+            </form>
+        </div>
+            
     </section>
 
 </body>
