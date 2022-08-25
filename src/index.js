@@ -21,7 +21,7 @@ submitBtn.addEventListener('click', async () => {
 
   const name = inputName.value;
   const score = inputScore.value;
-  // inputName.value = ''; inputScore.value = '';
+  inputName.value = ''; inputScore.value = '';
 
   await addElement(name, score, id, url);
   await getBoard(genBoard, id, url);

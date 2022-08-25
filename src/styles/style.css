@@ -6,12 +6,6 @@
   margin: 0;
 }
 
-input {
-  border: 2px solid #000;
-  font-size: 12px;
-  padding: 3px;
-}
-
 button {
   box-shadow: 2px 2px 2px black;
 }
@@ -35,6 +29,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+ 
 }
 
 /* Container-Imagen for the background */
@@ -99,10 +94,11 @@ body {
   flex-direction: column;
   width: 55%;
   height: fit-content;
-  max-height: 390px;
+  max-height:58vh;
   padding: 10px;
   background-color: rgba(255, 255, 255, 0.535);
   border-radius: 5px;
+  scroll-behavior: smooth;
 }
 
 .tableLcont-title-botton {
@@ -148,33 +144,88 @@ body {
 }
 
 /* table right */
+.container-addYourScore {
+  /* background-image: url(/assets/add-your-score.jpg);
+  background-size: 150% 150%;
+  background-repeat: no-repeat; */
+
+  width: 30%;
+  height: fit-content;
+  
+  margin-top: 5%;
+  border-radius: 30px;
+}
+
 .tb-addYourScores {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 30%;
-  height: 30%;
   padding: 10px;
-  margin-top: 5%;
-  background-color: rgba(255, 255, 255, 0.535);
+
+  background-color: rgba(255, 255, 255, 0.315);
   border-radius: 30px;
 }
 
 .title-addYourScores {
-  font-size: 12px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
+
+  margin: 15px 0 15px 0;
+  height: fit-content;
+  width: 100%;
+}
+
+/* Icon of airplane */
+.title-addYourScores i {
+  font-size: 40px;
+  color: white;
+}
+
+.title-addYourScores i:hover {
+  transform: scale(1.2);
+  color: rgb(245, 3, 3);
+  text-shadow: -30px 0 5px rgb(0, 0, 0);
+}
+
+.title-addYourScores span {
+  padding: 0;
+  font-size: medium;
+  color: white;
+  text-shadow: 0 0 15px rgb(0, 0, 0);
+}
+
+.container-input {
+  display: flex;
+  justify-content: space-around;
+}
+
+.container-input i {
+  font-size:2rem;
+  width: 20%;
+  color: rgba(255, 255, 255, 0.529);
+  text-align: center;
+}
+
+input {
+  font-size: 10px;
+  margin: 0 0 20px 0;
+  padding: 10px;
+  font-family: 'Press Start 2P', cursive;
+  background-color: transparent;
+  border: 0;
+  border-bottom: 2px solid white;
 }
 
 .input-name {
-  margin: 10px 0;
+  width: 70%;
 }
 
 input::placeholder {
-  font-size: 10px;
-  font-weight: bold;
-  color: rgba(0, 0, 0, 0.726);
-  padding-left: 5px;
+ 
+  color: rgb(0, 0, 0);
+  text-shadow: 0 0 5px rgb(255, 255, 255);
+  font-family: 'Press Start 2P', cursive;
 }
 
 .button-addYourScores {
@@ -185,5 +236,35 @@ input::placeholder {
   margin: 10px 0 0 auto;
   width: fit-content;
   
+
+}
+
+@media screen and (max-width: 762px) {
+
+  .tb-recentScores {
+    width: 50%;
+    max-height:50vh;
+  }
+
+  .container-addYourScore {
+    width: 50%;
+  }
+
+  .title-addYourScores i {
+    display: none;
+  }
+
+  .title-addYourScores span {
+    font-size: 1rem;
+  }
+
+  .container-input  {
+    font-size: 5px;
+  }
+
+  .container-input i {
+    display: none;
+  }
+
 
 }
