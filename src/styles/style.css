@@ -1,5 +1,4 @@
 
-
 /* stylelint-disable */
 * {
   padding: 0;
@@ -14,17 +13,12 @@ body {
   width: 100vw;
   height: 100vh;
   box-sizing: border-box;
-
   font-family: 'Press Start 2P', cursive;
   font-size: 12px;
-
   background-color: rgb(0, 0, 0);
-
-
   display: flex;
   justify-content: center;
   align-items: center;
- 
 }
 
 /* Container-Imagen for the background */
@@ -34,6 +28,23 @@ body {
   background-image: url(/assets/kitchen-los-simpsons.jpg);
   background-size: 100% 100%;
   background-repeat: no-repeat;
+  position: relative;
+}
+
+.switch {
+  width: 8%;
+  height: 14%;
+  position: absolute;
+  left: 20px;
+  top: 32%;
+  z-index: 999;
+}
+
+.turnTheLight {
+  background-color: rgba(0, 0, 0, 0.874);
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
 }
 
 /* Main section */
@@ -47,7 +58,6 @@ body {
   background-image: url(/assets/wallpaperflare.com_wallpaper.jpg);
   background-size: 120% 100%;
   background-repeat: no-repeat;
-  
   background-color: rgba(255, 255, 255, 0.085);
   display: flex;
   flex-direction: column;
@@ -289,6 +299,7 @@ input::placeholder {
   width: 5vw;
   height: 5vw;
   background-color: red;
+  background: linear-gradient(45deg, #c80606, #901313, #6c0b0b);
   box-shadow: 5px 3px 1px black;
   color: white;
 }
@@ -296,6 +307,7 @@ input::placeholder {
 .button-addYourScores:active{
   top:10px;
   background-color:#38a900;
+  background: linear-gradient(45deg, #38a900,#246c01,#1b5101);
   box-shadow:  0 1px 0 rgb(153, 153, 153), inset 0 -3px 0 black;
 }
 
