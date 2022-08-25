@@ -72,7 +72,7 @@ body {
 
 .title-leaderBoard span {
   color: white;
-  text-shadow: 10px 10px 5px rgb(0, 0, 0);
+  text-shadow: 10px 10px 5px black;
   font-size: 20px;
 }
 
@@ -88,13 +88,21 @@ body {
   display: flex;
   justify-content: space-around;
   margin: 10px;
+
+  height: 100%;
+  border-radius: 2px;
 }
 
 /* table left */
 .tb-recentScores {
   display: flex;
   flex-direction: column;
-  width: 40%;
+  width: 55%;
+  height: fit-content;
+  max-height: 390px;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.535);
+  border-radius: 5px;
 }
 
 .tableLcont-title-botton {
@@ -119,23 +127,37 @@ body {
 
 .ul-score {
   list-style: none;
-  border: 2px solid #000;
+  border: 2px solid rgb(131, 130, 130);
+  overflow-y: scroll;
 }
 
 .ul-score li{
-  font-size: 10px;
-  padding-left: 5%;
+  font-size: 8px;
+  padding: 3px;
+  letter-spacing: 2px;
 }
 
 .ul-score li:nth-child(even){
-  background-color: rgb(221, 221, 221);
+  background-color: rgba(0, 0, 0, 0.492);
+  color: rgb(250, 250, 250);
+}
+
+.ul-score li:nth-child(odd){
+  background-color: rgba(255, 255, 255, 0.54);
+  color: #000;
 }
 
 /* table right */
 .tb-addYourScores {
   display: flex;
   flex-direction: column;
-  width: 40%;
+  justify-content: center;
+  width: 30%;
+  height: 30%;
+  padding: 10px;
+  margin-top: 5%;
+  background-color: rgba(255, 255, 255, 0.535);
+  border-radius: 30px;
 }
 
 .title-addYourScores {
