@@ -12,7 +12,6 @@ button {
 
 button:hover {
   cursor: pointer;
-  transform: scale(0.9);
 }
 
 body {
@@ -113,13 +112,20 @@ body {
   font-size: 14px;
 }
 
+/* Refresh button */
 .button-recentScores {
-  font-size: 8px;
+  font-size: 20px;
   font-weight: 700;
   border-radius: 0;
   padding: 0 2px 0 2px;
   margin: 0;
 }
+
+
+
+
+
+
 
 .ul-score {
   list-style: none;
@@ -229,14 +235,22 @@ input::placeholder {
 }
 
 .button-addYourScores {
-  font-size: 8px;
+  font-size: 100%;
   font-weight: 700;
-  border-radius: 0;
+  border-radius: 50%;
   padding: 0 2px 0 2px;
   margin: 10px 0 0 auto;
-  width: fit-content;
-  
+  width: 5vw;
+  height: 5vw;
+  background-color: red;
+  box-shadow: 5px 3px 1px black;
+  color: white;
+}
 
+.button-addYourScores:active{
+  top:10px;
+  background-color:#38a900;
+  box-shadow:  0 1px 0 rgb(153, 153, 153), inset 0 -3px 0 black;
 }
 
 @media screen and (max-width: 762px) {
