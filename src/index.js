@@ -4,8 +4,8 @@ import genBoard from './modules/Gen-Board.js';
 import addElement from './modules/addElement.js';
 import getBoard from './modules/Get-Board.js';
 
-// const id = 'QgHcOIXPyYQqqLJkTuJF';
-const id = 'QgHcOIXPyYQqqLJkTuJ1'; //false Id
+const id = 'QgHcOIXPyYQqqLJkTuJF';
+// const id = 'QgHcOIXPyYQqqLJkTuJ1'; //false Id
 const url = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api';
 
 const submitBtn = document.getElementById('input-button');

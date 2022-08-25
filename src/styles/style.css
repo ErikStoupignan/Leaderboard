@@ -6,10 +6,6 @@
   margin: 0;
 }
 
-button {
-  box-shadow: 2px 2px 2px black;
-}
-
 button:hover {
   cursor: pointer;
 }
@@ -116,17 +112,68 @@ body {
 .button-recentScores {
   font-size: 20px;
   font-weight: 700;
-  border-radius: 0;
-  padding: 0 2px 0 2px;
+
   margin: 0;
+  border: none;
+  background-color: transparent;
 }
 
+.glow-on-hover {
+  outline: none;
+  color: rgb(2, 2, 2);
+  background: rgba(205, 32, 32, 0);
+  padding: 0 2px 0 2px;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+}
 
+.glow-on-hover:before {
+  content: '';
+  background: linear-gradient(45deg, #ff0000, #020202, #ff0501, #060606);
+  position: absolute;
+  top: -2px;
+  left:-2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+}
 
+.glow-on-hover:active {
+  color: rgb(251, 251, 251)
+}
 
+.glow-on-hover:active:after {
+  background: transparent;
+}
 
+.glow-on-hover:hover:before {
+  opacity: 1;
+}
 
+.glow-on-hover:after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(245, 242, 242, 0.015);
+  left: 0;
+  top: 0;
+}
 
+@keyframes glowing {
+  0% { background-position: 0 0; }
+  50% { background-position: 400% 0; }
+  100% { background-position: 0 0; }
+}
+
+/* List downloaded from API */
 .ul-score {
   list-style: none;
   border: 2px solid rgb(131, 130, 130);
@@ -189,9 +236,7 @@ body {
 }
 
 .title-addYourScores i:hover {
-  transform: scale(1.2);
-  color: rgb(245, 3, 3);
-  text-shadow: -30px 0 5px rgb(0, 0, 0);
+  text-shadow: 0 0 5px rgb(0, 0, 0);
 }
 
 .title-addYourScores span {
@@ -235,7 +280,8 @@ input::placeholder {
 }
 
 .button-addYourScores {
-  font-size: 100%;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 70%;
   font-weight: 700;
   border-radius: 50%;
   padding: 0 2px 0 2px;
@@ -251,6 +297,11 @@ input::placeholder {
   top:10px;
   background-color:#38a900;
   box-shadow:  0 1px 0 rgb(153, 153, 153), inset 0 -3px 0 black;
+}
+
+.button-addYourScores i {
+  font-size: 30px;
+  color: white;
 }
 
 @media screen and (max-width: 762px) {
