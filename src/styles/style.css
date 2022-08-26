@@ -339,4 +339,9 @@ input::placeholder {
   .container-input i {
     display: none;
   }
+
+  .button-addYourScores i {
+    font-size: 15px;
+    color: white;
+  }
 }
