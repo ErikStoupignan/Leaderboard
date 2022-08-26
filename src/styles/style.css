@@ -191,27 +191,25 @@ body {
 }
 
 .ul-score li{
-  font-size: 8px;
-  padding: 3px;
+  font-size: 10px;
+  padding: 5px;
   letter-spacing: 2px;
 }
 
 .ul-score li:nth-child(even){
   background-color: rgba(0, 0, 0, 0.492);
   color: rgb(250, 250, 250);
+  text-shadow: 0 0 4px black;
 }
 
 .ul-score li:nth-child(odd){
   background-color: rgba(255, 255, 255, 0.54);
   color: #000;
+  text-shadow: 0 0 5px rgb(255, 255, 255);
 }
 
 /* table right */
 .container-addYourScore {
-  /* background-image: url(/assets/add-your-score.jpg);
-  background-size: 150% 150%;
-  background-repeat: no-repeat; */
-
   width: 30%;
   height: fit-content;
   
@@ -233,7 +231,6 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   margin: 15px 0 15px 0;
   height: fit-content;
   width: 100%;
@@ -342,6 +339,4 @@ input::placeholder {
   .container-input i {
     display: none;
   }
-
-
 }
