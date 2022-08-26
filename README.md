@@ -60,7 +60,7 @@ For educational purpose only, use it as a guideline.
 
 - GitHub: [@ErikStoupignan](https://github.com/ErikStoupignan)
 - Twitter: [@Erik_Stoupignan](https://twitter.com/Erik_Stoupignan)
-- LinkedIn: [Erik Stoupignan Sánchez Beltrán](https://www.linkedin.com/in/erik-stoupignan-s%C3%A1nchez-beltr%C3%A1n-393180238/)
+- LinkedIn: [Erik Stoupignan Sánchez Beltrán](https://www.linkedin.com/in/erik-s%C3%A1nchez-beltr%C3%A1n-393180238/)
 
 ## Authors
 <a href="MIT.md">License MIT.md</a>
