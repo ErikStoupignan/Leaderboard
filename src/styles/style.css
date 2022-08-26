@@ -5,42 +5,82 @@
   margin: 0;
 }
 
-input {
-  border: 2px solid #000;
-}
-
-button {
-  box-shadow: 2px 2px 2px black;
-}
-
 button:hover {
   cursor: pointer;
-  transform: scale(0.9);
 }
 
 body {
-  width: 100%;
+  width: 100vw;
+  height: 100vh;
   box-sizing: border-box;
-  font-family: 'Comic Neue', cursive;
-  background-color: rgba(5, 9, 236, 0.151);
+  font-family: 'Press Start 2P', cursive;
+  font-size: 12px;
+  background-color: rgb(0, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Container-Imagen for the background */
+.container-background {
+  width: 100vw;
+  height: 100vh;
+  background-image: url(/assets/kitchen-los-simpsons.jpg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.switch {
+  width: 8%;
+  height: 14%;
+  position: absolute;
+  left: 20px;
+  top: 32%;
+  z-index: 999;
+}
+
+.turnTheLight {
+  background-color: rgba(0, 0, 0, 0.574);
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
 }
 
 /* Main section */
 .section-container {
-  background-color: white;
-  width: 80vw;
-  margin: 12vh auto;
+  border: 15px solid #000;
+  width: 59vw;
+  height: 78.5vh;
+  margin: 5vh auto;
   padding: 0 20px 20px 20px;
+  border-radius: 20px 20px 0 0;
+  background-image: url(/assets/wallpaperflare.com_wallpaper.jpg);
+  background-size: 120% 100%;
+  background-repeat: no-repeat;
+  background-color: rgba(255, 255, 255, 0.085);
   display: flex;
   flex-direction: column;
-  box-shadow: 0 0 10px black;
-  border-radius: 20px;
 }
 
 .title-leaderBoard {
   display: flex;
+  align-items: center;
   width: fit-content;
   margin: 20px 20px 5px 20px;
+}
+
+.title-leaderBoard span {
+  color: white;
+  text-shadow: 10px 10px 5px black;
+  font-size: 20px;
+}
+
+.title-leaderBoard .fa-brands {
+  color: rgb(233, 230, 230);
+  text-shadow: 0 7px rgb(0, 0, 0);
+  margin-right: 10px;
+  font-size: 50px;
 }
 
 /* tables container */
@@ -48,13 +88,22 @@ body {
   display: flex;
   justify-content: space-around;
   margin: 10px;
+
+  height: 100%;
+  border-radius: 2px;
 }
 
 /* table left */
 .tb-recentScores {
   display: flex;
   flex-direction: column;
-  width: 40%;
+  width: 55%;
+  height: fit-content;
+  max-height:58vh;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.535);
+  border-radius: 5px;
+  scroll-behavior: smooth;
 }
 
 .tableLcont-title-botton {
@@ -69,59 +118,230 @@ body {
   font-size: 14px;
 }
 
+/* Refresh button */
 .button-recentScores {
-  font-size: 8px;
+  font-size: 20px;
   font-weight: 700;
-  border-radius: 0;
-  padding: 0 2px 0 2px;
+
   margin: 0;
+  border: none;
+  background-color: transparent;
 }
 
+.glow-on-hover {
+  outline: none;
+  color: rgb(2, 2, 2);
+  background: rgba(205, 32, 32, 0);
+  padding: 0 2px 0 2px;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+}
+
+.glow-on-hover:before {
+  content: '';
+  background: linear-gradient(45deg, #ff0000, #020202, #ff0501, #060606);
+  position: absolute;
+  top: -2px;
+  left:-2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+}
+
+.glow-on-hover:active {
+  color: rgb(251, 251, 251)
+}
+
+.glow-on-hover:active:after {
+  background: transparent;
+}
+
+.glow-on-hover:hover:before {
+  opacity: 1;
+}
+
+.glow-on-hover:after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(245, 242, 242, 0.015);
+  left: 0;
+  top: 0;
+}
+
+@keyframes glowing {
+  0% { background-position: 0 0; }
+  50% { background-position: 400% 0; }
+  100% { background-position: 0 0; }
+}
+
+/* List downloaded from API */
 .ul-score {
   list-style: none;
-  border: 2px solid #000;
+  border: 2px solid rgb(131, 130, 130);
+  overflow-y: scroll;
 }
 
 .ul-score li{
   font-size: 10px;
-  padding-left: 5%;
+  padding: 5px;
+  letter-spacing: 2px;
 }
 
 .ul-score li:nth-child(even){
-  background-color: rgb(221, 221, 221);
+  background-color: rgba(0, 0, 0, 0.492);
+  color: rgb(250, 250, 250);
+  text-shadow: 0 0 4px black;
+}
+
+.ul-score li:nth-child(odd){
+  background-color: rgba(255, 255, 255, 0.54);
+  color: #000;
+  text-shadow: 0 0 5px rgb(255, 255, 255);
 }
 
 /* table right */
+.container-addYourScore {
+  width: 30%;
+  height: fit-content;
+  
+  margin-top: 5%;
+  border-radius: 30px;
+}
+
 .tb-addYourScores {
   display: flex;
   flex-direction: column;
-  width: 40%;
+  justify-content: center;
+  padding: 10px;
+
+  background-color: rgba(255, 255, 255, 0.315);
+  border-radius: 30px;
 }
 
 .title-addYourScores {
-  font-size: 12px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15px 0 15px 0;
+  height: fit-content;
+  width: 100%;
+}
+
+/* Icon of airplane */
+.title-addYourScores i {
+  font-size: 40px;
+  color: white;
+}
+
+.title-addYourScores i:hover {
+  text-shadow: 0 0 5px rgb(0, 0, 0);
+}
+
+.title-addYourScores span {
+  padding: 0;
+  font-size: medium;
+  color: white;
+  text-shadow: 0 0 15px rgb(0, 0, 0);
+}
+
+.container-input {
+  display: flex;
+  justify-content: space-around;
+}
+
+.container-input i {
+  font-size:2rem;
+  width: 20%;
+  color: rgba(255, 255, 255, 0.529);
+  text-align: center;
+}
+
+input {
+  font-size: 10px;
+  margin: 0 0 20px 0;
+  padding: 10px;
+  font-family: 'Press Start 2P', cursive;
+  background-color: transparent;
+  border: 0;
+  border-bottom: 2px solid white;
 }
 
 .input-name {
-  margin: 10px 0;
+  width: 70%;
 }
 
 input::placeholder {
-  font-size: 10px;
-  font-weight: bold;
-  color: rgba(0, 0, 0, 0.726);
-  padding-left: 5px;
+ 
+  color: rgb(0, 0, 0);
+  text-shadow: 0 0 5px rgb(255, 255, 255);
+  font-family: 'Press Start 2P', cursive;
 }
 
 .button-addYourScores {
-  font-size: 8px;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 70%;
   font-weight: 700;
-  border-radius: 0;
+  border-radius: 50%;
   padding: 0 2px 0 2px;
   margin: 10px 0 0 auto;
-  width: fit-content;
-  
+  width: 5vw;
+  height: 5vw;
+  background-color: red;
+  background: linear-gradient(45deg, #c80606, #901313, #6c0b0b);
+  box-shadow: 5px 3px 1px black;
+  color: white;
+}
 
+.button-addYourScores:active{
+  top:10px;
+  background-color:#38a900;
+  background: linear-gradient(45deg, #38a900,#246c01,#1b5101);
+  box-shadow:  0 1px 0 rgb(153, 153, 153), inset 0 -3px 0 black;
+}
+
+.button-addYourScores i {
+  font-size: 30px;
+  color: white;
+}
+
+@media screen and (max-width: 762px) {
+
+  .tb-recentScores {
+    width: 50%;
+    max-height:50vh;
+  }
+
+  .container-addYourScore {
+    width: 50%;
+  }
+
+  .title-addYourScores i {
+    display: none;
+  }
+
+  .title-addYourScores span {
+    font-size: 1rem;
+  }
+
+  .container-input  {
+    font-size: 5px;
+  }
+
+  .container-input i {
+    display: none;
+  }
+
+  .button-addYourScores i {
+    font-size: 15px;
+    color: white;
+  }
 }

@@ -11,9 +11,10 @@ const submitBtn = document.getElementById('input-button');
 const inputScore = document.getElementById('input-score');
 const inputName = document.getElementById('input-name');
 const updateBtn = document.getElementById('btnUpdate');
+const light = document.getElementById('switch');
 
 // eslint-disable-next-line
-submitBtn.addEventListener('click', () => {
+submitBtn.addEventListener('click', async () => {
   if (inputScore.value === '' || inputName.value === '') {
     return;
   }
@@ -22,10 +23,14 @@ submitBtn.addEventListener('click', () => {
   const score = inputScore.value;
   inputName.value = ''; inputScore.value = '';
 
-  addElement(name, score, id, url);
-  getBoard(genBoard, id, url);
+  await addElement(name, score, id, url);
+  await getBoard(genBoard, id, url);
 });
 
 updateBtn.addEventListener('click', () => {
   getBoard(genBoard, id, url);
+});
+
+light.addEventListener('click', () => {
+  document.getElementById('light').classList.toggle('turnTheLight');
 });

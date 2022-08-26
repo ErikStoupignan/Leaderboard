@@ -7,41 +7,52 @@
     <title>LeaderBoard</title>
 
     <!-- Link to FontAwesome page -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" 
-    integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
-    crossorigin="anonymous"/>
+    <script src="https://kit.fontawesome.com/e7a5915a5c.js" crossorigin="anonymous"></script>
 
-    <!-- Font family Lato -->
+    <!-- Font family -'DotGothic16', sans-serif;' - 'Gugi', cursive;' - 'Press Start 2P', cursive;' - 'Sacramento', cursive; -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Gugi&family=Press+Start+2P&family=Sacramento&display=swap" rel="stylesheet">
 
 </head>
 <body>
 
-    <section class="section-container">
+    
 
-        <h1 class="title-leaderBoard">LeaderBoard</h1>
-
-        <div class="tables-container">
-            <!-- container 1 for Recent scores -->
-            <div class="tb-recentScores">
-                <div class="tableLcont-title-botton"><h2 class="title-recentScores">Recent scores</h2><button id="btnUpdate" type="submit" class="button-recentScores">Refresh</button></div>
-                <ul id="scoreTable" class="ul-score"></ul>
+    <section class="container-background">
+        <div id='switch' class="switch"></div>
+        <div id='light' class="">
+            <div class="section-container">
+                <h1 class="title-leaderBoard fa-fade"><i class="fa-brands fa-space-awesome"></i><span>LeaderBoard</span></h1>
+                <div class="tables-container">
+                    <!-- container 1 for Recent scores -->
+                    <div class="tb-recentScores">
+                        <div class="tableLcont-title-botton">
+                            <h2 class="title-recentScores">
+                                Recent scores
+                            </h2>
+                            <button id="btnUpdate" type="submit" class="button-recentScores glow-on-hover">
+                                <i class="fa-solid fa-cog fa-spin"></i>
+                            </button>
+                        </div>
+                        <ul id="scoreTable" class="ul-score"></ul>
+                    </div>
+                    <!-- container 2 for Add your score -->
+                    <div class="container-addYourScore">
+                        <form id="input-form" class="tb-addYourScores">
+                            <h2 class="title-addYourScores"><span>Add your score</span><i class="fa-solid fa-jet-fighter-up"></i></h2>
+                            <div class="container-input"><i class="fa-solid fa-user-astronaut"></i><input id="input-name" class="input-name" placeholder="Your name..." type="text"></div>
+                            <div class="container-input"><i class="fa-solid fa-boxes-stacked"></i><input id="input-score" class=" input-name input-score" placeholder="Your score..." type="number"></div>
+                            <button id="input-button" class="button-addYourScores" type="button"><i class="fa-solid fa-jet-fighter"></i></button>
+                        
+                        </form>
+                    </div>
+                </div>
+                    
             </div>
-
-            <!-- container 2 for Add your score -->
-            <form id="input-form" class="tb-addYourScores">
-                <h2 class="title-addYourScores">Add your score</h2>
-
-                <input id="input-name" class="input-name" placeholder="Your name..." type="text">
-                <input id="input-score" class="input-score" placeholder="Your score..." type="number">
-                <button id="input-button" class="button-addYourScores" type="button">Submit</button>
-            
-            </form>
         </div>
-            
     </section>
 
+    <!-- <iframe src="https://giphy.com/embed/tsX3YMWYzDPjAARfeg" width="376" height="480" frameBorder="0" allowFullScreen></iframe> -->
 </body>
 </html>
