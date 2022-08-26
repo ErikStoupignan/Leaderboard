@@ -18,6 +18,10 @@
 
 ![image](https://user-images.githubusercontent.com/106561762/186544171-0c9020fa-3995-400b-862b-0730faba9128.png)
 
+## Screenshot of my project
+
+![image](https://user-images.githubusercontent.com/106561762/186810847-7e2af5af-6198-4fe8-a5f2-18d09c8f160a.png)
+
 ## Getting Started
 
 To get a local copy up and running it, follow these simple steps.
